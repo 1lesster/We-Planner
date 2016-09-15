@@ -45,10 +45,16 @@ section > h2{
     color: #000;
     text-align: center;
 }
-.start-section{
-	height: 100vh;
-	background: url('../img/bitmap2x.png') 0 0 no-repeat;
-	background-size: cover;
+.wrapper.main .start-section{
+    background: url('../img/bitmap2x.png') 0 0 no-repeat;
+    background-size: cover;
+    height: 100vh;  
+}
+.wrapper.about .start-section{
+	background: url('../img/bitmap-about-page.png') 0 0 no-repeat;
+    background-size: cover;
+    height: 710px;
+    padding-top: 60px;
 }
 .main-header{
 	height: 60px;
@@ -58,8 +64,9 @@ section > h2{
 .main-header.white{
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
     position: relative;
+    background-color: #fff;
 }
-#white-header.fixed{
+.main-header.white.fixed{
     position: fixed;
     left: 0;
     top: 0;
@@ -84,6 +91,20 @@ section > h2{
     flex-wrap: wrap;
     height: 100%;
 }
+.flex-mid{
+    -webkitflex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+}
 .logo{
     width: 240px;
     height: 12px;
@@ -96,7 +117,8 @@ section > h2{
     display: inline-block;
     margin: 0 10px;
 }
-.main-nav > li.active{
+.main-nav > li.active,
+.main-nav > li:hover{
     border-bottom: 1px solid #ea4848;
 }
 .main-nav > li > a{
@@ -161,9 +183,11 @@ section > h2{
     font-size: 52px;
     font-weight: 600;
     text-align: center;
-    margin-top: 170px;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.26);
+}
+.start-section > h1{    
+    margin-top: 170px;
 }
 .start-section h1 > span:first-child{
     color: #ea4848;
@@ -763,4 +787,40 @@ section.providers-portfolio{
 .subscribe-btn:hover:after, 
 .subscribe-btn:active:after {
     height: 100%;
+}
+section.capabilities{
+    background-color: #F5F5F5;
+    padding-bottom: 35px;
+}
+.reason{
+    text-align: center;
+}
+.reason > li{
+    display: inline-block;
+    width: 120px;
+    margin: 0 20px;
+}
+.reason .circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: solid 1px #ea4848;
+    text-align: center;
+    line-height: 110px;
+    margin-bottom: 15px;
+}
+.reason .circle > span{
+    font-size: 52px;
+    font-family: Georgia;
+    font-weight: normal;
+    font-style: italic;
+    color: #000;
+}
+.reason .circle > p{
+    font-size: 16px;
+    color: #000;
+}
+section.can-do{
+    border-top: solid 1px rgba(0, 0, 0, 0.26);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.26);
 }
