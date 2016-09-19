@@ -60,6 +60,12 @@ section > h2{
     height: 710px;
     padding-top: 60px;
 }
+.wrapper.catalog .start-section{
+    background: url('../img/bitmap-catalogue-page.png') 0 0 no-repeat;
+    background-size: cover;
+    height: 530px;
+    padding-top: 60px;
+}
 .main-header{
 	height: 60px;
 	width: 100%;
@@ -145,12 +151,18 @@ section > h2{
     color: rgba(255, 255, 255, 0.87);
     font-size: 16px;
 }
-.profile .dropdown-menu{
+.lang .dropdown-menu{
     min-width: 60px;
     left: -14px;
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
-.profile .lang{
+.profile > li{
     position: relative;
+}
+.main-header .login.open > a{
+    color: #ea4848;
 }
 .main-header.white .lang:after,
 .main-header.white .lang:before{
@@ -171,11 +183,17 @@ section > h2{
 .profile .lang:before{
     right: -15px;
 }
+.main-header .login.open .login-icon{
+    background: url("../img/login-sprite.png") 0 0 no-repeat;
+    background-position: 0 0;
+}
 .main-header.white .login-icon{
-    background: url("../img/ic-login-gray.png") 0 0 no-repeat;
+    background: url("../img/login-sprite.png") 0 0 no-repeat;
+    background-position: -21px 0;
 }
 .login-icon{
-    background: url("../img/ic-login-white.png") 0 0 no-repeat;
+    background: url("../img/login-sprite.png") 0 0 no-repeat;
+    background-position: -42px 0;
     display: inline-block;
     width: 21px;
     height: 22px;
@@ -483,24 +501,25 @@ section.new-providers{
 .providers-carousel .item{
     text-align: center;
 }
-.providers-carousel .control{
+.control{
     width: 50px;
     height: 96px;
     position: absolute;
-    top: 40%;
+    top: 50%;
+    margin-top: -48px;
 }
-.providers-carousel .left.control{
+.left.control{
     background: url('../img/ic-slide-left.png') 0 0 no-repeat;
     left: 0;
 }
-.providers-carousel .left.control:hover{
+.left.control:hover{
     background: url('../img/ic-slide-left-hover.png') 0 0 no-repeat;
 }
-.providers-carousel .right.control{
+.right.control{
     background: url('../img/ic-slide-right.png') 0 0 no-repeat;
     right: 0;
 }
-.providers-carousel .right.control:hover{
+.right.control:hover{
     background: url('../img/ic-slide-right-hover.png') 0 0 no-repeat;
 }
 .video-section{
@@ -509,7 +528,7 @@ section.new-providers{
     background-size: cover;
     position: relative;
 }
-.video-section .video-heading{
+.video-heading{
     width: 700px;
     text-transform: uppercase;
     font-size: 52px;
@@ -737,14 +756,14 @@ section.providers-portfolio{
 .subscribe-form input.email:active {
     outline: none !important;
 }
-.subscribe-form input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.4s ease;}
-.subscribe-form input::-moz-placeholder                {opacity: 1; transition: opacity 0.4s ease;}
-.subscribe-form input:-moz-placeholder                 {opacity: 1; transition: opacity 0.4s ease;}
-.subscribe-form input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.4s ease;}
-.subscribe-form input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.4s ease;}
-.subscribe-form input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.4s ease;}
-.subscribe-form input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.4s ease;}
-.subscribe-form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.4s ease;}
+input.op-place::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.4s ease;}
+input.op-place::-moz-placeholder                {opacity: 1; transition: opacity 0.4s ease;}
+input.op-place:-moz-placeholder                 {opacity: 1; transition: opacity 0.4s ease;}
+input.op-place:-ms-input-placeholder            {opacity: 1; transition: opacity 0.4s ease;}
+input.op-place:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.4s ease;}
+input.op-place:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.4s ease;}
+input.op-place:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.4s ease;}
+input.op-place:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.4s ease;}
 
 .subscribe-form .subscribe-btn{
     margin-left: 12px;
@@ -911,15 +930,6 @@ section.reviews hr{
     height: 100px;
     position: relative;
     margin: 30px auto 20px;
-    z-index: 5;
-}
-.quote-img-mask{
-    border-radius: 50%;
-    overflow: hidden;
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    z-index: 10;
 }
 .quote-name{
     font-size: 20px;
@@ -951,4 +961,130 @@ section.reviews hr{
     width: 12px;
     height: 12px;
     margin: 0 1px;
+}
+#carousel-img .item > img{
+    width: 100%;
+    object-fit: cover;
+    height: 530px;
+}
+.login-form{
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+}
+.login .dropdown-menu{
+    padding: 0;
+    margin: 0;
+    left: -155px;
+    top: 30px;
+    border-radius: 2px; 
+    border: solid 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+.login-form > input{
+    height: 45px;
+    line-height: 45px;
+    width: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 13px;
+}
+.login-form .login-btn{
+    background-color: #ea4848;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+}
+.main-header .dropdown-menu .login-form > a{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.26);
+}
+.main-header .login-form > a:hover{
+    color: #ea4848;
+}
+.login-form > p{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.login-form .reg-btn{
+    border: solid 1px #ea4848;
+    color: #ea4848;
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+    position: relative;
+    z-index: 5;
+}
+.reg-btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: #ea4848 none repeat scroll 0 0;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+}
+.reg-btn:hover:after,
+.reg-btn:active:after {
+    height: 100%;
+}
+.reg-btn:hover {
+    color: #fff;
+}
+section.filters{
+    padding-bottom: 40px;
+}
+.filters-select{
+    height: 40px;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    border-right: 0;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.54);
+    padding-left: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: url('../img/ic-arrow-down-black.png') 90% 50% no-repeat;
+}
+.filters-form .form-group{
+    margin-right: -4px;
+}
+.filters-form .form-group:nth-child(1){
+    width: 22%;
+}
+.filters-form .form-group:nth-child(2){
+    width: 27%;
+}
+.filters-form .form-group:nth-child(3){
+    width: 18%;
+}
+.filters-form .form-group:nth-child(4){
+    width: 14%;
+}
+.filters-form .form-group:nth-child(1) select{
+    border-radius: 2px 2px 0 0;
+}
+.filters-form .search{
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ea4848;
+    border: solid 1px transparent;
+    border-radius: 0 2px 2px 0;
+    width: 18%;
 }
