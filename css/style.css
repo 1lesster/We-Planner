@@ -262,6 +262,7 @@ section > h2{
 section.categories{
     background-color: #F5F5F5;
     padding-bottom: 35px;
+    border-top: solid 1px rgba(0, 0, 0, 0.26);
 }
 section.categories > h2{
     padding-top: 41px;
@@ -454,7 +455,6 @@ section.new-providers{
 }
 .thumbnail{
     position: relative;
-    margin: 0 8px;
     border: none;
     width: 300px;
     height: 400px;
@@ -679,35 +679,35 @@ section.providers-portfolio{
     float: right;
     width: 48%;
 }
-.social > li{
+footer .social > li{
     display: inline-block;
     margin: 0 6px;
 }
-.social > li:last-child{
+footer .social > li:last-child{
     margin-right: 0;
 }
-.social > li:first-child{
+footer .social > li:first-child{
     margin-left: 0;
 }
-.social > li > a{
+footer .social > li > a{
     display: block;
     width: 20px;
     height: 20px;
     background: url('../img/social-spritesheet.png') 0 0 no-repeat;
 }
-.social > li > a.fb{
+footer .social > li > a.fb{
     background-position: 0 0;
 }
-.social > li > a.vk{
+footer .social > li > a.vk{
     background-position: -20px 0;
 }
-.social > li > a.in{
+footer .social > li > a.in{
     background-position: -40px 0;
 }
-.social > li > a.insta{
+footer .social > li > a.insta{
     background-position: -60px 0;
 }
-.social > li > a.pt{
+footer .social > li > a.pt{
     background-position: -80px 0;
 }
 .footer .logo{
@@ -841,9 +841,7 @@ section.our-offer{
     padding-bottom: 40px;
 }
 .our-offer-item{
-    float: left;
-    width: 50%;
-    padding-right: 20px;
+    overflow: hidden;
 }
 .our-offer-item:nth-child(1),
 .our-offer-item:nth-child(2){
@@ -867,6 +865,7 @@ section.our-offer{
     font-size: 16px;
     line-height: 1.25;
     color: #000;
+    padding-right: 10px;
 }
 .our-offer-item .offer-info > span{
     display: block;
@@ -981,6 +980,19 @@ section.reviews hr{
     border: solid 1px rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
+.login .dropdown-menu:after{
+    content: '';
+    position:absolute;
+    right: 0px;
+    top: -43px;
+    height: 43px;
+    width: 100px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 3px solid #fff;
+    box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 2px 2px 0 0;
+}
 .login-form > input{
     height: 45px;
     line-height: 45px;
@@ -1045,46 +1057,203 @@ section.reviews hr{
 .reg-btn:hover {
     color: #fff;
 }
-section.filters{
+section.search-prov{
     padding-bottom: 40px;
 }
-.filters-select{
+.search-prov h2{
+    padding-top: 35px;
+    margin-bottom: 25px;
+}
+.search-filter{
+    float: left;
     height: 40px;
     border: solid 1px rgba(0, 0, 0, 0.26);
     border-right: 0;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.54);
+    line-height: 40px;
+    background: url('../img/ic-arrow-down-black.png') 88% 50% no-repeat;
+}
+.search-filter > a{
+    display: block;
+    height: 100%;
     padding-left: 20px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 16px;
+}
+.search-filter .dropdown-menu{
+    border-radius: 2px;
     width: 100%;
-    background: url('../img/ic-arrow-down-black.png') 90% 50% no-repeat;
+    min-width: auto;
 }
-.filters-form .form-group{
-    margin-right: -4px;
-}
-.filters-form .form-group:nth-child(1){
+.search-filter.city{
     width: 22%;
+    border-radius: 2px 0 0 2px;
 }
-.filters-form .form-group:nth-child(2){
+.search-filter.looking{
     width: 27%;
 }
-.filters-form .form-group:nth-child(3){
+.search-filter.you-event{
     width: 18%;
 }
-.filters-form .form-group:nth-child(4){
+.search-filter.date{
     width: 14%;
+    background-position: 80% 50%;
 }
-.filters-form .form-group:nth-child(1) select{
-    border-radius: 2px 2px 0 0;
-}
-.filters-form .search{
+.search-prov .search{
+    float: left;    
+    line-height: 38px;
     height: 40px;
-    color: #fff;
-    font-size: 16px;
     background-color: #ea4848;
     border: solid 1px transparent;
     border-radius: 0 2px 2px 0;
-    width: 18%;
+    width: 14%;
+}
+.search-prov .search > a{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+section.sign{
+    padding-top: 60px;
+    padding-bottom: 45px;
+    background-color: #F5F5F5;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.26);
+}
+.sign .sign-form{
+    width: 620px;
+    margin: 0 auto;
+}
+.sign-form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    padding-left: 55px;
+    font-weight: 100;
+}
+.sign-form input.name{
+    background: #fff url('../img/ic-username.png') 13px 50% no-repeat;
+}
+.sign-form input.email{
+    background: #fff url('../img/ic-email.png') 13px 50% no-repeat;
+}
+.sign-form input.pass{
+    background: #fff url('../img/ic-passwrod.png') 13px 50% no-repeat;
+}
+.sign-form input.pass{
+    background: #fff url('../img/ic-passwrod.png') 13px 50% no-repeat;
+}
+.row.p-bot{
+    padding-bottom: 20px;
+}
+.sign-form .reg{
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 40px;
+    background: #ea4848 url('../img/ic-register.png') 45% 50% no-repeat;    
+}
+.sign-form .or{
+    display: block;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sign-form .or:after,
+.sign-form .or:before{
+    content: '';
+    width: 290px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.26);
+    vertical-align: middle;
+}
+.sign-form .or:before{
+    left: 0;
+}
+.sign-form .or:after{
+    right: 0;
+}
+.sign-form > p{
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+.sign-form .sign-social{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px;
+}
+.sign-social > a{
+    display: block;
+    font-size: 14px;
+    padding-left: 15px;
+    color: #fff;
+}
+.sign-social.fb{
+    background: #486caa url('../img/fb.png') 20% 50% no-repeat;
+}
+.sign-social.tw{
+    background: #00baf3 url('../img/tweet.png') 22% 50% no-repeat;
+}
+.sign-social.vk{
+    background: #41689b url('../img/vk.png') 16% 50% no-repeat;
+}
+.sign-social.gl{
+    background: #e76140 url('../img/g.png') 22% 50% no-repeat;
+}
+.filter-menu-btn{
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    margin-top: 8px;
+    float: left;
+    background: url('../img/ic-menu.png') 0 0 no-repeat;
+}
+.filter-menu-btn > a{
+    display: block;
+    height: 100%;
+}
+section.venues{
+    background-color: #f5f5f5;
+    height: 800px;
+}
+.venues header{
+    padding: 20px 0;
+}
+.venues .filter-btn{
+    float: left;
+    display: inline-block;
+    border: solid 1px #ea4848;
+    height: 40px;
+    line-height: 40px;
+    background: url('../img/ic-filter-red.png') 10% 50% no-repeat;
+}
+.filter-btn > a{
+    padding-left: 40px;
+    padding-right: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ea4848;
+}
+.venues .venues-num{
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 7px;
 }
