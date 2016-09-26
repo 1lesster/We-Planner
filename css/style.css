@@ -456,7 +456,7 @@ section.new-providers{
 .thumbnail{
     position: relative;
     border: none;
-    width: 300px;
+    width: 100%;
     height: 400px;
     display: inline-block;
     padding: 0;
@@ -472,24 +472,41 @@ section.new-providers{
     background-color: rgba(0, 0, 0, 0.3);
 }
 .thumbnail .caption{
-    padding: 20px;
-    bottom: -120px;
+    padding: 20px 20px 0 20px;
+    bottom: 0;
     position: absolute;
     text-align: left;
     color: #fff;
     font-size: 16px;
     font-weight: 400;
-    -o-transition: bottom ease-out 0.5s;
-    -webkit-transition: bottom ease-out 0.5s;
-    -moz-transition: bottom ease-out 0.5s;
-    transition: bottom ease-out 0.5s;
+
+    display: none;
 }
 .thumbnail > a{
     display: block;
     height: 100%;
 }
-.thumbnail:hover .caption{
-    bottom: 0;
+.hover-caption{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: solid 1px #979797;
+}
+.hover-caption .caption-heading{
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 90px;
+}
+.hover-caption .city{
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
 }
 .caption .caption-heading{
     font-size: 24px;
@@ -498,6 +515,9 @@ section.new-providers{
     line-height: normal;
     margin: 15px 0;
 }
+/*.thumbnail:hover .caption{
+    display: none;
+}*/
 .providers-carousel .item{
     text-align: center;
 }
