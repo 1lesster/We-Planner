@@ -16,6 +16,12 @@
     font-weight: 600;
     src: url(../fonts/ProximaNovaSemibold.otf) format("truetype");
 }
+@font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/ProximaNovaBold.otf) format("truetype");
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -130,6 +136,9 @@ section > h2{
 .main-nav > li.active,
 .main-nav > li:hover{
     border-bottom: 1px solid #ea4848;
+}
+.main-nav > li.active > a{
+    font-weight: 700;
 }
 .main-nav > li > a{
     color: rgba(255, 255, 255, 0.87);
@@ -479,11 +488,14 @@ section.new-providers{
     color: #fff;
     font-size: 16px;
     font-weight: 400;
-
-    display: none;
 }
 .thumbnail > a{
     display: block;
+    height: 100%;
+}
+.thumbnail > img{
+    object-fit: cover;
+    width: 100%;
     height: 100%;
 }
 .hover-caption{
@@ -494,19 +506,48 @@ section.new-providers{
     top: 0;
     left: 0;
     border-radius: 4px;
+    padding: 0 21px;
     background-color: rgba(255, 255, 255, 0.85);
     border: solid 1px #979797;
+    display: none;
 }
 .hover-caption .caption-heading{
     color: #000;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 90px;
 }
 .hover-caption .city{
     font-size: 16px;
     font-weight: 600;
     color: #000;
+}
+.hover-caption .stars{
+    margin-top: 20px;    
+}
+.stars > i{
+    color: #f03838;
+    font-size: 20px;
+    letter-spacing: -1px;
+    opacity: .5;
+}
+.stars > i.act{
+    opacity: 1;
+}
+.hover-caption .bill{
+    line-height: 54px;
+    height: 54px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.54);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    background: url('../img/ic-bill-black.png') 3% 50% no-repeat;
+}
+.hover-caption .bill span{
+    color: #ea4848;
+    padding-left: 5px;
 }
 .caption .caption-heading{
     font-size: 24px;
@@ -515,9 +556,30 @@ section.new-providers{
     line-height: normal;
     margin: 15px 0;
 }
-/*.thumbnail:hover .caption{
+.hover-caption .add{
+    margin-top: 50px;
+    text-align: center;    
+}
+.hover-caption .add span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('../img/ic-compare.png') 0 0 no-repeat;
+    margin-bottom: 5px;
+}
+.hover-caption .add a{
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+}
+.hover-caption .add a:hover{
+    color: #f03838;
+}
+.thumbnail:hover .caption{
     display: none;
-}*/
+}
+.thumbnail:hover .hover-caption{
+    display: block;
+}
 .providers-carousel .item{
     text-align: center;
 }
@@ -767,7 +829,6 @@ footer .social > li > a.pt{
     border: 1px solid #E4E4E4;
     width: 300px;
     background-color: transparent;
-    line-height: 40px;
     height: 40px;
     font-size: 12px;
     padding-left: 12px;
@@ -1015,7 +1076,6 @@ section.reviews hr{
 }
 .login-form > input{
     height: 45px;
-    line-height: 45px;
     width: 100%;
     border: solid 1px rgba(0, 0, 0, 0.26);
     border-radius: 4px;
@@ -1079,6 +1139,7 @@ section.reviews hr{
 }
 section.search-prov{
     padding-bottom: 40px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.26);
 }
 .search-prov h2{
     padding-top: 35px;
@@ -1249,9 +1310,9 @@ section.sign{
 }
 section.venues{
     background-color: #f5f5f5;
-    height: 800px;
+    position: relative;
 }
-.venues header{
+.venues .container-custom header{
     padding: 20px 0;
 }
 .venues .filter-btn{
@@ -1276,4 +1337,342 @@ section.venues{
     font-weight: 600;
     color: #000;
     margin-top: 7px;
+}
+.venues-num .in-compare{
+    display: inline-block;
+    position: relative;   
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.venues-num .in-compare > a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #ea4848;
+}
+.venues-num .in-compare:after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    right: 0;
+    top: 2px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+.page-nav{
+    text-align: center;
+}
+.pagination > li.ellipsis > a{
+    background-color: transparent;
+    border: none;
+}
+.pagination > li > a{
+    margin: 0 5px;
+    color: #ea4848;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    min-width: 30px;
+}
+.pagination > li > a:hover,
+.pagination > li > a:active{
+    color: rgba(0, 0, 0, 0.87);
+}
+.pagination>li:first-child>a{
+    margin-left: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pagination>li:last-child>a{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.search-prov.is-fixed{
+    width: 100%;
+    position: fixed;
+    top: -13px;
+    background: #fff;
+    z-index: 50;
+    padding-bottom: 22px;
+}
+.sliding-panel-wrap{
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+    background: rgba(0,0,0,.54);
+    height: calc(100vh - 145px);
+    top: 145px;
+    left: 0;
+    display: none;
+}
+.sliding-panel{
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 50%;
+    min-width: 600px;
+    height: 100%;
+    background: rgba(255,255,255, 0.96);
+    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.26);
+    padding: 25px 20px 20px; 
+    border-right: 1px solid rgba(0, 0, 0, 0.26);
+
+}
+.sliding-panel h3{
+    display: inline-block;
+    padding-left: 30px;
+    margin: 0;
+    background: url('../img/ic-filter-black.png') 0 50% no-repeat;
+}
+.sliding-panel .close{
+    width: 20px;
+    height: 20px;
+    background: url('../img/ic-close.png') 0 0 no-repeat;
+
+}
+.sliding-panel hr{
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.sliding-panel .filter-label{
+    width: 30%;
+    float: left;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.sliding-panel .filter-label span{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.54);
+    display: block;
+    margin-top: 5px;
+}
+.filter-area.price .filter{
+    margin-top: 10px;
+}
+.sliding-panel .filter{
+    width: 70%;
+    float: right;
+}
+/*ui-slider*/
+.ui-slider{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 4px;
+}
+.ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+.ui-widget-header {
+    background: #ea4848;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -8px;
+    margin-left: -8px;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    background-color: #fff;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-slider .ui-slider-handle:focus,
+.ui-slider .ui-slider-handle:hover{
+    outline: 0;
+}
+.amount-block{
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+.amount-block input{
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.amount-block .val-0,
+.amount-block .val-1{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.amount-block .val-0{
+    float: left;
+}
+.amount-block .val-1{
+    float: right;
+}
+.filter > .dropdown{
+    border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    height: 40px;
+    line-height: 40px;
+    width: 45%;
+    background: #fff url(../img/ic-arrow-down-black.png) 93% 50% no-repeat;
+}
+.filter > .dropdown > a{
+    display: block;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.filter .dropdown-menu{
+    width: 100%;
+}
+.filter-label.areas{
+    margin-top: 10px;
+}
+.filter .checkbox{   
+    float: left;
+    width: 50%;
+    margin: 0 0 15px;
+}
+.filter .checkbox:nth-child(3),
+.filter .checkbox:nth-child(4){
+    margin: 0;
+}
+.filter .checkbox input{
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 -25px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+}
+.sliding-panel form{
+    position: relative;
+    height: 100%;
+}
+.sliding-panel form .btn-group{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.sliding-panel form button{
+    width: 140px;
+    height: 40px;
+    background-color: #fff;
+    border: solid 1px rgba(0, 0, 0, 0.26);
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+}
+.sliding-panel form button.apply{
+    background-color: #ea4848;
+    border: solid 1px transparent;
+    color: #fff;
+    margin-left: 20px;
+}
+.thumbnail.banner{
+    height: 400px;
+}
+.thumbnail.row-banner{
+    height: 180px;
+}
+.thumbnail.banner,
+.thumbnail.row-banner{
+    width: 100%;
+    background-color: #dedede;
+}
+.compare-section{
+    padding-top: 60px;
+    height: 675px;
+    background-color: #F5F5F5;
+}
+.compare-section header{
+    overflow: hidden;
+    padding: 30px 0;
+}
+.compare-section header span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+}
+.compare-section header span:first-child{
+    padding-left: 30px;
+    background: url('../img/ic-compare-black.png') 0 50% no-repeat;
+}
+.compare-item{
+    width: 160px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    position: relative;
+}
+.compare-item.title{
+    padding: 242px 0 0;
+    font-weight: 600;
+    text-align: left;
+}
+.compare-item .picture{    
+    margin-bottom: 15px;
+    height: 180px;
+}
+.compare-item .picture img{    
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.compare-item .name{
+    font-weight: 700;
+    height: 37px;
+    line-height: 16px;
+}
+.compare-item.title .item-row{
+    margin: 0;
+}
+.compare-item .item-row{
+    height: 46px;
+    margin: 0 -10px;
+    line-height: 46px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.compare-item .stars > i{
+    font-size: 18px;
+    letter-spacing: -3px;
+}
+.item-row > span{
+    font-weight: 600;
+}
+.b-bot{
+     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.compare-item:hover:not(.title){
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.compare-item:hover .check{
+    display: block;
+}
+button.check{
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding-left: 17px;
+    border: 0;
+    background: #ea4848 url("../img/ic-check-date.png") 9% 50% no-repeat;
+    display: none;
 }
