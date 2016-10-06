@@ -64,13 +64,13 @@ section > h2{
 	background: url('../img/bitmap-about-page.png') 0 0 no-repeat;
     background-size: cover;
     height: 710px;
-    padding-top: 60px;
+    margin-top: 60px;
 }
 .wrapper.catalog .start-section{
     background: url('../img/bitmap-catalogue-page.png') 0 0 no-repeat;
     background-size: cover;
     height: 530px;
-    padding-top: 60px;
+    margin-top: 60px;
 }
 .main-header{
 	height: 60px;
@@ -232,6 +232,12 @@ section > h2{
     color: #fff;
     font-weight: 400;
     padding: 0;
+}
+.slogan.ideas{
+    width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
 }
 .buttons-block{
     width: 370px;
@@ -760,36 +766,55 @@ section.providers-portfolio{
     float: right;
     width: 48%;
 }
-footer .social > li{
+footer .social > li,
+.company-info .social > li{
     display: inline-block;
     margin: 0 6px;
 }
-footer .social > li:last-child{
+footer .social > li:last-child,
+.company-info .social > li:last-child{
     margin-right: 0;
 }
-footer .social > li:first-child{
+footer .social > li:first-child,
+.company-info .social > li:first-child{
     margin-left: 0;
 }
-footer .social > li > a{
+footer .social > li > a,
+.company-info .social > li > a{
     display: block;
     width: 20px;
     height: 20px;
     background: url('../img/social-spritesheet.png') 0 0 no-repeat;
 }
-footer .social > li > a.fb{
+.company-info .social > li > a.fb{
     background-position: 0 0;
 }
-footer .social > li > a.vk{
+.company-info .social > li > a.in{
     background-position: -20px 0;
 }
-footer .social > li > a.in{
+.company-info .social > li > a.insta{
     background-position: -40px 0;
 }
-footer .social > li > a.insta{
+.company-info .social > li > a.pt{
     background-position: -60px 0;
 }
-footer .social > li > a.pt{
+.company-info .social > li > a.vk{
     background-position: -80px 0;
+}
+footer .social > li > a.fb{
+    background-position: 0 -20px;
+}
+footer .social > li > a.in{
+    background-position: -20px -20px;
+}
+footer .social > li > a.insta{
+    background-position: -40px -20px;
+}
+footer .social > li > a.pt{
+    background-position: -60px -20px;
+}
+footer .social > li > a.vk{
+    background-position: -80px -20px;
 }
 .footer .logo{
     margin-top: 6px;
@@ -1226,7 +1251,7 @@ section.sign{
 .sign-form input.pass{
     background: #fff url('../img/ic-passwrod.png') 13px 50% no-repeat;
 }
-.row.p-bot{
+.p-bot{
     padding-bottom: 20px;
 }
 .sign-form .reg{
@@ -1653,7 +1678,7 @@ section.venues{
     font-weight: 600;
 }
 .b-bot{
-     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .compare-item:hover:not(.title){
     border-radius: 2px;
@@ -1678,4 +1703,347 @@ button.check{
 section.rules{
     padding-top: 60px;
     background-color: #F5F5F5;
+}
+section.rules p{
+    font-size: 16px;
+    color: #000000;
+}
+section.rules .container-custom:last-child{
+    padding: 40px 0;
+}
+.style-list{
+    list-style: inherit;
+    margin-left: 20px;
+}
+.style-list > li{
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: normal;
+}
+.rules .white-block{
+    width: 100%;
+    background: #fff;
+}
+.catalog-company .start-section{
+    height: 530px;
+    margin-top: 60px;
+}
+.company-open{
+    background-color: #F5F5F5;
+}
+.company-open .heading{
+    background-color: #fff;
+    padding: 20px 0;
+}
+.company-open .heading .img{
+    display: inline-block;
+    position: relative;
+    width: 140px;
+    height: 140px;
+    float: left;
+    margin-right: 20px;
+}
+.heading .img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.heading .mask{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 4px;
+    height: 100%;
+}
+.company-info{
+    display: inline-block;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.company-info h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+.company-info .desc > div{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.company-info .desc > div:not(:last-child):after{
+    content: ".";
+    position: absolute;
+    right: -13px;
+    top: -3px;
+}
+.company-info .desc > div:first-child{
+    margin-left: 0;
+}
+.company-info .stars i{
+    font-size: 16px;
+}
+.company-info .stars > span{
+    color: rgba(0, 0, 0, 0.54);
+    padding-left: 15px;
+}
+.company-info .kitch{
+    margin-top: 7px;
+}
+.kitch > a{
+    color: #ea4848;
+}
+.company-info .social{
+    margin-top: 20px;
+}
+.company-open .information{
+    overflow: hidden;
+    padding: 40px 0;
+}
+.information h3{
+    margin: 0 0 15px;
+}
+.information p{
+    font-size: 16px;
+    line-height: 1.25;
+    color: #000;
+}
+.company-reviews .heading{
+    height: 75px;
+    line-height: 75px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.company-reviews .heading span{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+}
+.company-reviews .heading .stars{
+    display: inline-block;
+    margin-left: 20px;
+}
+.heading .see-all{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+    padding-right: 30px;
+    background: url(../img/ic-arrow-right-red.png) 100% 50% no-repeat;
+}
+.reviews-block{
+    padding: 25px 0 0 30px;    
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 16px;
+}
+.reviews-block .image{
+    display: inline-block;
+    margin-right: 50px;
+    float: left;
+    width: 10%;
+}
+.reviews-block .text{
+    float: right;
+    width: 80%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 20px;
+}
+.reviews-block .image img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.reviews-block .name{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.reviews-block .date{
+    font-size: 14px;
+}
+.company-reviews .page-nav{
+    text-align: left;
+    margin-left: 24%;
+}
+.tabs-section{
+    background-color: #F5F5F5;
+    border-top: solid 1px rgba(0, 0, 0, 0.26);
+}
+.nav-tabs-wrap{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+}
+.nav-tabs-wrap .nav-tabs{
+    border: 0;
+}
+.nav-tabs-wrap .nav-tabs>li{
+    margin: 0 20px -1px;
+}
+.nav-tabs-wrap .nav-tabs>li:first-child{
+    margin-left: 0;
+}
+.nav-tabs-wrap .nav-tabs>li >a{    
+    line-height: 54px;
+    padding: 0;
+    display: block;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.nav-tabs-wrap .nav-tabs>li.active>a, 
+.nav-tabs-wrap .nav-tabs>li.active>a:focus, 
+.nav-tabs-wrap .nav-tabs>li.active>a:hover{
+    border: 0;
+    background: #F5F5F5;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+}
+.nav-tabs-wrap .nav-tabs>li >a, 
+.nav-tabs-wrap .nav-tabs>li >a:focus, 
+.nav-tabs-wrap .nav-tabs>li >a:hover{
+    border: 0;
+    background: #F5F5F5;
+}
+.nav-tabs-wrap .nav-tabs > li.active{
+    border-bottom: 1px solid #ea4848;
+}
+
+.nav-tabs > li.active:before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  border-bottom: 8px solid #ea4848;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  z-index: 5;
+  margin-left: -8px;
+}
+.nav-tabs > li.active:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  border-bottom: 7px solid #F5F5F5;
+  border-left: 7px solid transparent;  
+  border-right: 7px solid transparent;
+  margin-left: -7px;  
+  z-index: 6;
+}
+.tab-content .heading{
+    line-height: 64px;
+    height: 64px;
+}
+.tab-content .heading span {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+}
+.wrapper.ideas .start-section{
+    height: 530px;
+    margin-top: 60px;
+    background: url('../img/bitmap-ideas-page.png') 0 0 no-repeat;
+    background-size: cover;
+}
+.discover .settings{
+    margin-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.26);
+    line-height: 69px;
+}
+.settings form > button{
+    border: 0;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.settings form > button:first-child{    
+    margin-left: 0;
+}
+.settings form > button:last-child{    
+    margin-right: 0;
+}
+.settings form .menu{
+    background: url("../img/ic-menu.png") 0 0 no-repeat;
+}
+.settings form .col{
+    background: url("../img/ic-color-black.png") 0 0 no-repeat;
+}
+.settings form .set{
+    background: url("../img/ic-settings-black.png") 0 0 no-repeat;
+}
+.settings form .search{
+    background: url("../img/ic-search-grey.png") 0 0 no-repeat;
+}
+.settings form input,
+.settings form input:focus,
+.settings form input:active{
+    border: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.26);
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+.settings form input{
+    display: inline-block;
+    height: 20px;
+    padding-left: 20px;
+    vertical-align: middle;
+    width: 82%;
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+}
+section.found{
+    background-color: #f5f5f5;
+    padding-top: 20px; 
+}
+.found .heading{
+    margin-bottom: 20px;
+}
+.found .tags{
+    position: relative;
+    border: solid 1px #ea4848;
+    line-height: 40px;
+    color: #ea4848;
+    display: inline-block;
+    padding: 0 35px 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.tags .is-close{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+}
+.is-close:after,
+.is-close:before{
+    position: absolute;
+    top: 6px;
+    left: 0;
+    content: '';
+    width: 12px;
+    height: 1px;
+    background: #ea4848;
+}
+.is-close:after{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.is-close:before{
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
