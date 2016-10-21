@@ -272,7 +272,7 @@ section > h2{
     border-radius: 4px;
     background-color: transparent;
     border: solid 1px transparent;
-    transition: all linear .5s;
+    transition: all linear .4s;
 }
 .action-block.open{
     background-color: rgba(255, 255, 255, 0.8);
