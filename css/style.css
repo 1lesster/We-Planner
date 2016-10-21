@@ -2425,14 +2425,12 @@ section.write-us{
 .bill-coupon{
     width: 300px;
     position: absolute;
-    right: 24.75%;
     top: -80px;
     z-index: 1000;
 }
 .bill-coupon.fixed{
     position: fixed;
     top: 65px;
-    right: 24.75%;
 }
 .bill-form,
 .bill-address{

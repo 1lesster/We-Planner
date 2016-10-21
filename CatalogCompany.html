@@ -131,7 +131,7 @@
 			<div class="information">
 				<div class="container-custom">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-8 for-coordinats">
 							<h3>Authentic trattoria with an obsessive eye for detail...</h3>
 							<p>Tavernetta is a lovely provincial Italian restaurant in the heart of Odesa. A great place for pasta lovers! In Tavernetta’s menu you will find the kind of dishes that a simple Italian housewife loves to cook for her family. The flour, olive oil, cheese, capers, anchovies are Italian. All other ingredients are the best Ukrainian products available. Tavernetta suggests you start your day with a good Italian espresso and a panini sandwich. The prices are quite reasonable, and there is also a shop where one can purchase food, wine, and culinary souvenirs.</p>
 
@@ -359,6 +359,12 @@
 	            sticky.removeClass('fixed');
 	        }
 	    });
+
+		$(window).on("resize", function () {
+			var coord = $( ".for-coordinats" ),
+				rt =  coord.offset().left + coord.outerWidth();
+			$( ".bill-coupon" ).css({"left": rt + 'px'});
+		}).resize();
 	</script>
 </body>
 </html>
