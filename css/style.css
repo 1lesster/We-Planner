@@ -151,11 +151,13 @@ section > h2{
 .profile{   
     text-align: right;
     white-space: nowrap;
-    width: 240px;
 }
 .profile > li{
     display: inline-block;
     margin: 0 5px;
+}
+.profile > li.is-logged{
+    padding-right: 8px;
 }
 .profile > li > a{
     color: rgba(255, 255, 255, 0.87);
@@ -1096,6 +1098,7 @@ section.reviews hr{
 .login.is-logged .dropdown-menu{
     left: 0;
     border-top-width: 0;
+    width: 100%;
 }
 .login.is-logged .dropdown-menu:after{
     top: -42px;
@@ -1116,10 +1119,10 @@ section.reviews hr{
     border-radius: 2px 2px 0 0;
 }
 .is-logged-form{
-    width: 206px;
+    width: 100%;
 }
 .login.is-logged .dropdown-menu:after{
-    width: 208px;
+    width: 101%;
     right: -1px;
 }
 .is-logged-form li{
