@@ -148,9 +148,10 @@ section > h2{
 .main-header.white .profile a{
     color: rgba(0, 0, 0, 0.87);
 }
-.profile{
-    width: 240px;
+.profile{   
     text-align: right;
+    white-space: nowrap;
+    width: 240px;
 }
 .profile > li{
     display: inline-block;
@@ -199,6 +200,17 @@ section > h2{
 .main-header.white .login-icon{
     background: url("../img/login-sprite.png") 0 0 no-repeat;
     background-position: -21px 0;
+}
+.login.is-logged .login-icon,
+.login.open.is-logged .login-icon{
+    background: url("../img/ic-menu-profile.png") 0 0 no-repeat;
+}
+.login.open.is-logged b{
+    color: black;
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .login-icon{
     background: url("../img/login-sprite.png") 0 0 no-repeat;
@@ -1071,6 +1083,7 @@ section.reviews hr{
     padding: 20px;
     width: 260px;
     text-align: center;
+    white-space: normal;
 }
 .login .dropdown-menu{
     padding: 0;
@@ -1079,7 +1092,15 @@ section.reviews hr{
     top: 30px;
     border-radius: 2px; 
     border: solid 1px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+}
+.login.is-logged .dropdown-menu{
+    left: 0;
+    border-top-width: 0;
+}
+.login.is-logged .dropdown-menu:after{
+    top: -42px;
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.176);
+    border-bottom-width: 0;
 }
 .login .dropdown-menu:after{
     content: '';
@@ -1091,8 +1112,43 @@ section.reviews hr{
     background: transparent;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-bottom: 3px solid #fff;
-    box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px -2px 3px 0px rgba(0,0,0,.175);
     border-radius: 2px 2px 0 0;
+}
+.is-logged-form{
+    width: 206px;
+}
+.login.is-logged .dropdown-menu:after{
+    width: 208px;
+    right: -1px;
+}
+.is-logged-form li{
+    line-height: 40px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);    
+}
+.is-logged-form li > a{
+    padding-left: 34px;
+    display: block;
+}
+.is-logged-form li:last-child{
+    border-bottom: none;
+}
+.is-logged-form li:nth-child(1){
+    background: url('../img/ic-menu-budget.png') 0 50% no-repeat;
+}
+.is-logged-form li:nth-child(2){
+    background: url('../img/ic-menu-wishlist.png') 0 50% no-repeat;
+}
+.is-logged-form li:nth-child(3){
+    background: url('../img/ic-menu-profile.png') 0 50% no-repeat;
+}
+.is-logged-form li:nth-child(4){
+    background: url('../img/ic-menu-logout.png') 0 50% no-repeat;
+}
+.is-logged-form ul{
+    padding: 0 15px 5px;
 }
 .login-form > input{
     height: 45px;
