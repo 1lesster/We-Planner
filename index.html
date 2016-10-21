@@ -75,7 +75,57 @@
 			<h2 class="slogan">Мы устроим Вам праздник!</h2>
 			<div class="buttons-block">
 				<button class="l-btn"></button>
-				<button class="action-btn">Найти исполнителя</button>
+				<div id="action-block" class="action-block">
+					<form class="action-form" action="">
+						<div id="select-wrap" class="select-wrap">
+							<div class="action-select dropdown">
+								<a data-toggle="dropdown" href="#" aria-expanded="true">
+									Your city
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li><a href="#">Kharkov</a></li>
+									<li><a href="#">Kiev</a></li>
+									<li><a href="#">London</a></li>
+								</ul>
+							</div>
+							<div class="action-select dropdown">
+								<a data-toggle="dropdown" href="#" aria-expanded="true">
+									Who are you looking for
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li><a href="#">Who are you looking for</a></li>
+									<li><a href="#">Who are you looking for</a></li>
+									<li><a href="#">Who are you looking for</a></li>
+								</ul>
+							</div>
+							<div class="action-select dropdown">
+								<a data-toggle="dropdown" href="#" aria-expanded="true">
+									Your event
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li><a href="#">Your event</a></li>
+									<li><a href="#">Your event</a></li>
+									<li><a href="#">Your event</a></li>
+								</ul>
+							</div>
+							<div class="action-select dropdown">
+								<a data-toggle="dropdown" href="#" aria-expanded="true">
+									Date
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li><a href="#">Date</a></li>
+									<li><a href="#">Date</a></li>
+									<li><a href="#">Date</a></li>
+								</ul>
+							</div>
+						</div>						
+						<button class="action-btn">Найти исполнителя</button>
+					</form>
+				</div>				
 				<button class="r-btn"></button>
 			</div>
 		</section>
@@ -603,5 +653,14 @@
 			<div class="clear"></div>
 		</div>
 	</footer>
+	<script>
+		$( document ).ready(function() {
+		    $( ".action-form .action-btn" ).click(function(e) {
+		    	e.preventDefault();
+		    	$( "#action-block" ).toggleClass("open");
+		    	$( "#select-wrap" ).slideToggle();
+			});
+		});
+	</script>
 </body>
 </html>
