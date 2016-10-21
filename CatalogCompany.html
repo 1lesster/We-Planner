@@ -125,8 +125,8 @@
 							<li><a class="pt" href="#"></a></li>
 						</ul>
 					</div>
-					<div class="clear"></div>
-				</div>				
+					<div class="clear"></div>					
+				</div>
 			</div>
 			<div class="information">
 				<div class="container-custom">
@@ -142,6 +142,36 @@
 							<p>The place has a very light and airy feel during the day, aided by all that Siberian pine, while at night the stucco walls ensure there is a warmth to guard against any evening Odessa chill. Bellissimo!</p>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="bill-coupon">
+				<form class="bill-form" action="#">
+					<header>
+						<div class="icon"></div>
+						Average bill:
+						<span>$42</span> / guest
+					</header>
+					<label class="pull-left" for="bill-date">
+						Date
+						<input id="bill-date" class="op-place" type="text" placeholder="dd/mm/yyyy">
+					</label>
+					<label class="pull-right" for="bill-text">
+						Guests
+						<input id="bill-text" class="op-place" type="text" placeholder="0">
+					</label>
+					<button class="bill-submit" type="submit">Book now</button>
+					<p>Your credit card won’t be charged</p>
+					<button class="bill-save">Save to Wishlist</button>
+				</form>
+				<div class="bill-address">
+					<div class="text">Address:</div>
+					<span>Odessa, Ukraine. Ekaterininskaya St., 45</span>
+					<div class="text">Phone:</div>
+					<span>+38-0482-344-621</span>
+					<div class="text">E-mail:</div>
+					<a href="mailto:adm-tt@resta.com.ua">adm-tt@resta.com.ua</a>
+					<div class="text">Web-site:</div>
+					<a href="http://www.tavernetta.ua/">http://www.tavernetta.ua/</a>
 				</div>
 			</div>
 		</section>
@@ -317,5 +347,18 @@
 			<div class="clear"></div>
 		</div>
 	</footer>
+	<script>
+		//bill-coupon toggle class fixed
+	    $(window).scroll(function(){
+	        var sticky = $('.bill-coupon'),
+	            scroll = $(window).scrollTop();
+
+	        if ( scroll >= 470) {
+	            sticky.addClass('fixed');
+	        } else {
+	            sticky.removeClass('fixed');
+	        }
+	    });
+	</script>
 </body>
 </html>
